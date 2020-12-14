@@ -1,7 +1,3 @@
-const Theme = {
-  LIGHT: 'light-theme',
-  DARK: 'dark-theme',
-};
 const body=document.querySelector("body");
 const checkBox = document.querySelector(".theme-switch__toggle");
 
@@ -9,10 +5,9 @@ const checkBox = document.querySelector(".theme-switch__toggle");
 checkBox.addEventListener('change', themeHandler);
 
 function themeHandler(event) {
-    console.log(event);
     if (checkBox.checked) {
          body.classList.remove('light-theme');
-        body.classList.add('dark-theme');
+         body.classList.add('dark-theme');
          localStorage.setItem('theme', 'dark-theme'); 
     } else if (!checkBox.checked) {
         body.classList.remove('dark-theme');
